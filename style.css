@@ -25,6 +25,7 @@ a:hover { color: red; }
 .article { padding: 4px; }
 .post-header { display: flex; align-items: start; gap: 7px; }
 .avatar { width: 76px; flex: 0 0 76px; text-align: center; font-size: 13px; color: #0016ae; }
+.avatar span { white-space: nowrap; }
 .avatar-image { border: 1px solid #bbd3af; padding: 4px; height: 76px; }
 .avatar-image img { width: 65px; height: 65px; }
 .post-meta { font-size: 16px; line-height: 36px; min-width: 0; }
@@ -46,12 +47,22 @@ a:hover { color: red; }
 #pagination button[aria-current="page"] { font-weight: bold; background: #d1e2c9; }
 [hidden] { display: none !important; }
 @media (max-width: 520px) {
-  .sidebar { flex-basis: 110px; width: 110px; }
-  .club-logo { max-width: 105px; }
-  .main { padding-left: 5px; }
-  .toolbar { flex-wrap: wrap; padding-inline: 3px; }
-  .button { padding-inline: 4px; }
-  .post-meta { line-height: 28px; }
+  .layout { display: block; }
+  .sidebar { width: 100%; padding: 6px 8px; background-position: right bottom; }
+  .club-logo { width: 105px; margin: 0; }
+  .club-name, .yahoo { display: none; }
+  .sidebar nav { display: flex; width: 100%; gap: 16px; overflow-x: auto; padding: 5px 0; text-align: left; }
+  .sidebar nav span, .sidebar nav a { flex: 0 0 auto; white-space: nowrap; }
+  .main { padding: 0; }
+  .greeting { font-size: 14px; line-height: 1.5; padding: 0 6px; overflow-wrap: anywhere; }
+  .toolbar { flex-wrap: wrap; padding: 5px 6px; }
+  .button { padding: 6px 8px; }
+  .post-meta { line-height: 1.7; overflow-wrap: anywhere; }
+  .post-meta > div { margin-bottom: 4px; }
+  .post-body { font-size: 17px; line-height: 1.8; }
+  .search input { max-width: 100%; }
+  .topics li { align-items: start; flex-direction: column; gap: 2px; padding: 8px 4px; }
+  #pagination button { min-width: 36px; min-height: 36px; margin-bottom: 4px; }
 }
 
 .banner-ad { text-align: center; margin: 4px 0; }
@@ -60,6 +71,11 @@ a:hover { color: red; }
 .island-panel img { display: block; width: 100%; height: auto; }
 .article::after { content: ""; display: block; clear: both; }
 @media (max-width: 520px) {
-  .island-panel { width: 160px; max-width: 45%; margin-left: 8px; }
-  .index-content { grid-template-columns: minmax(0, 1fr) minmax(0, 40%); gap: 8px; }
+  .index-content { display: flex; flex-direction: column; gap: 12px; padding: 10px 8px; }
+  .index-list { order: 0; width: 100%; }
+  .index-island-panel { order: 1; width: min(300px, 100%); align-self: center; }
+  .article { display: flex; flex-direction: column; padding: 8px; }
+  .post-header { order: 0; }
+  .post-body { order: 1; }
+  .island-panel { order: 2; float: none; width: min(300px, 100%); max-width: 100%; align-self: center; margin: 16px 0 0; }
 }
