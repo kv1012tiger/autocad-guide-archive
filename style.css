@@ -36,6 +36,7 @@ a:hover { color: red; }
 .index-list { grid-column: 1; grid-row: 1; min-width: 0; }
 .index-island-panel { grid-column: 2; grid-row: 1; align-self: start; }
 .index-island-panel img { display: block; width: 100%; height: auto; }
+.island-title { display: block; color: #0076ad; font-weight: bold; border-bottom: 1px solid #0089c2; margin-bottom: 4px; }
 .search { margin-bottom: 8px; }
 .search input { font: inherit; }
 .count { margin: 5px 0; }
