@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ 很急.......請教我autocad如何算圖塊面積!】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="054.html">【奇摩知識+ 有誰做過tqc-2006-3D的題目嗎】</a></li><li><a href="055.html">【奇摩知識+ AUTO CAD現在出到最新的是那個版本】</a></li><li><span aria-current="page">【奇摩知識+ 很急.......請教我autocad如何算圖塊面積!】</span></li><li><a href="057.html">【奇摩知識+ autocad 有5個使用上的問題想請教!】</a></li><li><a href="058.html">＊BYLAYER &amp; BYBLOCK</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ 很急.......請教我autocad如何算圖塊面積!】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-19T14:02:18">2006/03/19 14:02:18</time></p>
+        </header>
+        <div class="post-body">工作需要, 要算不規則形狀圖塊(solid)的面積, 有沒有方式讓cad自己計算呢? <br>
+因圖塊面積蠻多的, area 指令只能選取物件, 請指點, 非常感謝..... <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1306031902972" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1306031902972</a> <br>
+<br>
+以下為Auto CAD 2006版本解決方法: <br>
+<br>
+Q:圖塊(solid)的面積? <br>
+A:2D實面(solid)時無法得知面積的,如果是你說的圖塊是剖面線(HATCH)的話,可使用性質(properties)或LIST指令可以求得面積. <br>
+<br>
+Q:有沒有方式讓cad自己計算呢? <br>
+A:除非使用LISP才能獲得解決. <br>
+<br>
+Q:因圖塊面積蠻多的! <br>
+A:單一圖塊(剖面線)可使用LIST指令可以求得面積,二個圖塊(剖面線)以上則可用性質(properties)的累計面積得知. <br>
+<br>
+Q:area 指令只能選取物件! <br>
+A:如果圖塊(剖面線)沒有邊界,可使用剖面線編輯(HATCHEDIT)指令的重新建立邊界,再使用area指令作累計面積的動作.</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="055.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="057.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

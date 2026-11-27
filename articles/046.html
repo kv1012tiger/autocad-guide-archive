@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>＊物 件 鎖 點(OSNAP)｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="044.html">FIND 指令</a></li><li><a href="045.html">【奇摩知識+ 練習CAD的書】</a></li><li><span aria-current="page">＊物 件 鎖 點(OSNAP)</span></li><li><a href="047.html">【奇摩知識+ 急~~AUTO CAD上顏色的時候，無法成功!!!】</a></li><li><a href="048.html">【奇摩知識+ 請問AUTO CAD 2006圖塊編輯的問題!】</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>＊物 件 鎖 點(OSNAP)</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-04T22:05:46">2006/03/04 22:05:46</time></p>
+        </header>
+        <div class="post-body">可以指定相對於既有物件的點(如線的端點或圓的中心點)，但不能輸入座標。 <br>
+使用物件鎖點指定物件上的精確位置。例如，您可以使用物件鎖點，把線畫到一個圓的圓心或是一個聚合線線段的中點。 <br>
+取得物件鎖點列示，指令為OSNAP。 <br>
+若要在輸入點提示下指定物件鎖點，您可以按下[Shift]或[Ctrl] 並按一下滑鼠右鍵，以顯示「物件鎖點」快顯功能表。 <br>
+<br>
+如果已打開數個常駐式物件鎖點，則在給定位置可能會有一個以上符合條件的物件鎖點。按下[Tab]，以在指定點之前循環檢視可能指定的點。 <br>
+按一下狀態列上的「物件鎖點」按鈕，或按下[F3]，以打開或關閉常駐式物件鎖點。 <br>
+<br>
+PS:若要設定常駐式物件鎖點。系統變數為OSMODE <br>
+使用下列值的總和，將此設定儲存為位元碼： <br>
+0 無 (NON) <br>
+1 END (端點) <br>
+2 MID (中點) <br>
+4 CEN (圓心) <br>
+8 NOD (節點) <br>
+16 QUA (四分點) <br>
+32 INT (交點) <br>
+64 INS (插入點) <br>
+128 PER (垂直點) <br>
+256 TAN (切點) <br>
+512 NEA (最近點) <br>
+1024 清除所有物件鎖點 <br>
+2048 APP (外觀交點) <br>
+4096 延伸(EXT) <br>
+8192 PAR (平行) <br>
+如果要指定多個物件鎖點，請輸入其值的和。 例如，輸入 3 將指定端點」(位元碼 1) 與「中點」(位元碼 2) 物件鎖點。 輸入 16383 將會指定所有物件鎖點。</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="045.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="047.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

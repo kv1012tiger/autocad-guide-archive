@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ 有關cad的圖層控制 @@!】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="058.html">＊BYLAYER &amp; BYBLOCK</a></li><li><a href="059.html">【奇摩知識+ autoCAD2006的出圖設定!】</a></li><li><span aria-current="page">【奇摩知識+ 有關cad的圖層控制 @@!】</span></li><li><a href="061.html">【奇摩知識+ 要如何進修auto cad(高階) 請提供意見】</a></li><li><a href="062.html">【奇摩知識+ 怎麼消除AUTOCAD2006的出圖戳記~教育XXXXX!】</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ 有關cad的圖層控制 @@!】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-31T23:33:57">2006/03/31 23:33:57</time></p>
+        </header>
+        <div class="post-body">我之前的cad有一排控制列 <br>
+可以控制指定哪一種圖層要關掉 <br>
+或單獨顯示等等 <br>
+因為不小心更動了TIA的資料夾 <br>
+結果這項控制列 <br>
+也就不見了........... <br>
+請各位大大幫幫忙!!謝謝!!! <br>
+<br>
+這一排工具列大概五個 <br>
+每個icon都是英文 <br>
+比如***OFF 或是***ON等等 <br>
+功能為 <br>
+可以指定其中或多種圖層開啟或關閉等等 <br>
+因為工具列已經不見了,所以無法Prt Sc screen <br>
+.........sorry <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1206032905634" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1206032905634</a> <br>
+<br>
+關於開啟EXPRESS-LAYER TOOLS工具列,介紹2種版本做法: <br>
+◎AutoCAD 2002版本步驟: <br>
+1.請先確認acetmain.mns功能表檔是否遺失,EXPRESS資料夾是否遺失. <br>
+資料夾位置 C:\Program Files\AutoCAD 2002\EXPRESS\acetmain.mns <br>
+<br>
+2.如果該資料夾及acetmain.mns功能表檔都存在,請確認EXPRESS-LAYER TOOLS工具列是否存在. <br>
+<br>
+3.如果無此EXPRESS工具列可能acetmain.mns功能表檔已被釋放,請使用MENULOAD 指令作重新載入的動作, <br>
+瀏覽 C:\Program Files\AutoCAD 2002\EXPRESS\acetmain.mns 重新載入功能表檔。 <br>
+<span class="missing-image">［原附圖連結未收錄］</span> <br>
+<br>
+4.再開啟EXPRESS-LAYER TOOLS工具列即可。 <br>
+<span class="missing-image">［原附圖連結未收錄］</span> <br>
+<br>
+<br>
+MENULOAD 指令 <br>
+載入局部功能表檔案 <br>
+控制 AutoCAD 視窗的功能表群組和功能表列的檢視。 <br>
+資料來源:AutoCAD 2002說明 <br>
+<br>
+<br>
+◎AutoCAD 2006版本步驟: <br>
+1.請先確認acetmain.cui功能表檔是否遺失. <br>
+功能表檔位置 C:\Program Files\AutoCAD 2006\acetmain.cui <br>
+<br>
+2.如果該acetmain.cui功能表檔存在,請確認EXPRESS-LAYER TOOLS工具列是否存在. <br>
+<br>
+3.如果無此EXPRESS工具列可能acetmain.cui功能表檔已被釋放,請使用CUILOAD 指令作重新載入的動作, <br>
+瀏覽 C:\Program Files\AutoCAD 2006\acetmain.cui 重新載入功能表檔。 <br>
+<span class="missing-image">［原附圖連結未收錄］</span> <br>
+<br>
+4.再開啟EXPRESS-LAYER TOOLS工具列即可。 <br>
+<span class="missing-image">［原附圖連結未收錄］</span> <br>
+<br>
+<br>
+CUILOAD 指令 <br>
+開啟「載入/釋放自訂」對話方塊，您可在其中找到並載入 CUI 檔，以便自訂或轉移使用者介面設定。 <br>
+控制自訂群組和介面元素的顯示。 <br>
+<br>
+功能表檔對自訂檔 <br>
+在 AutoCAD 2006 之前的版本中，您透過在 ASCII 文字編輯器 (例如記事本) 中編輯 MNU 或 MNS 檔來自訂使用者介面。 您可以在文字檔中手動輸入並確認自訂資料，此過程繁瑣且容易出現錯誤。 因此，文字檔中的簡單語法錯誤 (例如，括號不匹配) 可使整個功能表檔無效，而您則要回到文字檔以檢查哪裡出現錯誤。 <br>
+使用「自訂使用者介面」對話方塊，您可以將指令拖曳至功能表或工具列，或按一下滑鼠右鍵以加入、刪除或修改使用者介面元素。 「自訂使用者介面」對話方塊可顯示元素性質以及您可以選擇之選項的列示。 這可防止您建立語法錯誤或拼字錯誤 (當您在 MNU 或 MNS 檔中手動輸入文字時可能發生)。 <br>
+過去使用的 MNU 和 MNS 檔已由一種檔案類型 (基於 XML 的 CUI 檔) 取代。 <br>
+資料來源:AutoCAD 2006說明</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="059.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="061.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

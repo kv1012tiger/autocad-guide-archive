@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ AUTOCAD2007如何直接編輯文字】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="102.html">【奇摩知識+ 急!!有關AUTOCAD】</a></li><li><a href="103.html">找不到cad系統資料夾</a></li><li><span aria-current="page">【奇摩知識+ AUTOCAD2007如何直接編輯文字】</span></li><li><a href="105.html">原廠 CAD 2007 國際認證</a></li><li><a href="106.html">關於 CAD 自學...</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ AUTOCAD2007如何直接編輯文字】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-07-21T13:03:37">2006/07/21 13:03:37</time></p>
+        </header>
+        <div class="post-body">Q:在CAD 2004-2006時.在文字方塊上直接連擊兩次，可直接編輯文字，但在2007裡確不行如此，請問是設定問題還是滑鼠問題?還是一定要&quot;點選文字按右鍵選擇編輯文字&quot;...希望不是如此...希望各位先知達德可以解惑..乾溫蛤.. <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1106071803646" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1106071803646</a> <br>
+<br>
+<br>
+A:這應該是設定的問題,有2個地方控制: <br>
+<br>
+步驟1: <br>
+輸入: DBLCLKEDIT 指令 <br>
+進入按兩下編輯模式 [開啟(ON)/關閉(OFF)] &lt;關閉&gt;: on <br>
+<br>
+ps:如果已是 on 或還是不行請再執行步驟2. <br>
+<br>
+步驟2:(a. b.都可行) <br>
+a.可從 選項 - 選取 - 選取模式 - 顯選取後執行...請勾選 <br>
+<br>
+b.或是輸入: PICKFIRST 系統變數 <br>
+PICKFIRST 的新值 &lt;0&gt;: 輸入 1 <br>
+<br>
+由於 cad 版本每年的昇級改版,難免都有一些隱藏的問題(bug),我有碰到幾個特殊狀況: <br>
+1. 2006 的 find 指令在尋找取代時,就無法辨識 # 而無法作尋找取代,在 2007 還是一樣. <br>
+2.鍵盤的 Delete 鍵,在 cad 裡無法使用,Auto CAD 好像沒有針對 delete 鍵設定系統變數,原因可能是個案設定檔(*.arg)出了問題,重新再匯入新的個案設定 Delete 鍵就可以使用,至於原因目前無法得知,有可能是編寫系統功能表本身產生混亂衝突而導致 delete 鍵無法使用. <br>
+<br>
+至於你的問題還是有幾個方法可以自我檢測: <br>
+1.是否每張圖都是一樣.........判斷圖檔是否出問題: <br>
+圖檔有可能一開始不是 Auto CAD 所建立的,而是由別種 CAD 軟體產生的圖檔,會有隱藏的錯誤資訊導致圖檔發生不合理的情況. <br>
+2.其他電腦的 2007 有沒有相同情況.........判斷 2007 是否出問題: <br>
+若別台電腦沒問題,可使用 SETVAR 指令,列示系統變數的值,跟其他電腦的 2007 系統變數比對.(系統變數很多,有點辛苦) <br>
+3.重新再匯入新的個案設定,並將個案設定設定為目前的. <br>
+4.請你試試看「按兩下動作」,是否全部物件都無法使用,若其他物件可使用「按兩下編輯」若只有文字編輯不行使用,有可能是在「自訂使用者介面」編輯器中,物件 TEXT 被更動了. <br>
+<br>
+2006 以前的按兩下編輯是內定的,無法做任何新增與更改.相關指令dblclkedit,系統變數DBLCLKEDIT <br>
+當游標置於圖面中的某物件上，且指向設備可以進行按兩下動作時，按兩下動作可讓您存取編輯指令。 <br>
+按兩下動作與物件類型相關聯，可讓您設定特定指令，以用於特定的物件類型。 <br>
+<br>
+當物件為 HATCH 執行 HATCHEDIT 指令 <br>
+當物件為 POLYLINE 執行 PEDIT 指令 <br>
+當物件為 TEXT 執行 DDEDIT 指令 <br>
+*注意事項 如果選取了多個物件，或按兩下動作未與物件類型關聯，則使用的預設指令為 PROPERTIES。 <br>
+<br>
+2007 在「自訂使用者介面」編輯器中,開放了「按兩下動作」的自訂編輯. <br>
+也就是說預設值;當物件為 DIMENSION 執行 性質 PROPERTIES 指令 <br>
+可把它改為 執行 標註編輯 dimedit 指令 <br>
+參考資料：Auto CAD 2007 說明</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="103.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="105.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

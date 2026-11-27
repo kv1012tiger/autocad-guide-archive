@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ 有關cad的出圖問題!】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="048.html">【奇摩知識+ 請問AUTO CAD 2006圖塊編輯的問題!】</a></li><li><a href="049.html">＊BEDIT 圖塊編輯器 &amp; EFEDIT 參考編輯指令</a></li><li><span aria-current="page">【奇摩知識+ 有關cad的出圖問題!】</span></li><li><a href="051.html">PSLTSCALE 系統變數</a></li><li><a href="052.html">LTSCALE 系統變數 $ CELTSCALE 系統變數</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ 有關cad的出圖問題!】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-14T14:53:20">2006/03/14 14:53:20</time></p>
+        </header>
+        <div class="post-body">我習慣用圖紙空間出圖 <br>
+不過 <br>
+最近遇到ㄌ一ㄍ問題 <br>
+我在模型空間使用的hidden線型 <br>
+在圖紙空間比例變的太大(在模型空間是沒有問題的) <br>
+要如何修改 <br>
+我曾經試著用窗選的方式出圖預覽 <br>
+卻又是我希望的比例 <br>
+要如何設定ㄋ <br>
+那ㄍcad達人告訴我吧 <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1306031004264" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1306031004264</a> <br>
+<br>
+步驟ㄧ、首先在模型空間將[使用圖紙空間單位調整比例]選項勾選取消。(提供2個方法) <br>
+方法1:鍵入LINETYPE指令(線型管理員),確認無勾選 □使用圖紙空間單位調整比例。 <br>
+方法2:或將 PSLTSCALE 系統變數設定為0。 <br>
+<br>
+步驟二、切換至圖紙空間(配置空間),並更視埠中的線型比例。(提供2個方法) <br>
+方法1:在欲編輯的視埠上單碰選兩次進入模型浮動空間,使用 REGEN 指令更新每個視埠中的線型比例。 <br>
+方法2:或直接刪除欲編輯的視埠,再輸入 U 作復原的動作,屆時也會更新每個視埠中的線型比例。 <br>
+<br>
+<br>
+<br>
+有關線型管理員針對線型的相關設定有3個系統變數: <br>
+<br>
+使用圖紙空間單位調整比例 (系統變數 PSLTSCALE) <br>
+將圖紙空間與模型空間中的線型比例調整為相同。 當您使用多個視埠時，此選項非常有用。 <br>
+<br>
+整體比例係數 (系統變數 LTSCALE) <br>
+顯示所有線型的整體比例係數。 <br>
+<br>
+目前的物件比例 (系統變數 CELTSCALE) <br>
+為新建立的物件設定線型比例。 產生的比例是整體比例係數乘以物件的比例係數。 <br>
+<br>
+建議剛開始對於線型管理員的3個系統變數不熟悉的話,請依下列設定: <br>
+[使用圖紙空間單位調整比例] 系統變數 PSLTSCALE 設為0。 <br>
+[整體比例係數] 系統變數 LTSCALE 依照目前單位及比例設定,例如單位為mm、比例1/10時,請設為100,單位為cm、比例1/10時,請設為10。 <br>
+[目前的物件比例] 系統變數 CELTSCALE 設定為1。若在模型空間有2組以上比例時,再作另外特殊設定(有使用到再作說明)。 <br>
+即可避免線型比例忽大忽小的現象了。</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="049.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="051.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

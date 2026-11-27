@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>＊BYLAYER &amp; BYBLOCK｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="056.html">【奇摩知識+ 很急.......請教我autocad如何算圖塊面積!】</a></li><li><a href="057.html">【奇摩知識+ autocad 有5個使用上的問題想請教!】</a></li><li><span aria-current="page">＊BYLAYER &amp; BYBLOCK</span></li><li><a href="059.html">【奇摩知識+ autoCAD2006的出圖設定!】</a></li><li><a href="060.html">【奇摩知識+ 有關cad的圖層控制 @@!】</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>＊BYLAYER &amp; BYBLOCK</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-20T21:24:08">2006/03/20 21:24:08</time></p>
+        </header>
+        <div class="post-body">BYLAYER <br>
+一種特殊的物件性質，用來指定該物件繼承其關聯之圖層的顏色或線型。 <br>
+指定新物件的顏色為物件建立時所在圖層的指定顏色。 選取「BYLAYER」後，目前圖層的顏色將顯示在「舊顏色樣本」與「新顏色樣本」中。 <br>
+<br>
+BYBLOCK <br>
+一種特殊的物件性質，用來指定該物件繼承任何含有該物件之圖塊的顏色或線型。 <br>
+指定在您將這物件分組到某個圖塊並插入圖塊之前，使用預設顏色 (白或黑，取決於背景顏色) 繪製新物件。 將圖塊插入圖面時，圖塊中的物件會繼承目前的「顏色」設定。 <br>
+<br>
+您繪製的每個物件都具有性質。 有些性質是一般性質，適用於大多數物件；例如，圖層、顏色、線型與出圖型式。 而另一些性質是物件專用的性質；例如，圓的性質包括半徑與面積，線的性質包括長度與角度。 <br>
+<br>
+大多數一般性質可以依圖層指定給物件，或直接指定給物件。 <br>
+<br>
+如果將性質設定為值 BYLAYER，則指定給該物件的值與繪製它所在圖層所具有的值相同。 <br>
+例如，如果將繪製於 Layer0 上的線顏色指定為 BYLAYER 並將 Layer0 的顏色指定為「紅」，則線為紅色。 <br>
+<br>
+如果將性質設定為特定的值，則該值會取代設定的圖層值。 <br>
+例如，如果將繪製於 Layer0 上的線顏色指定為「藍」並將 Layer0 顏色指定為「紅」，則線為藍色。 <br>
+<br>
+<br>
+控制圖塊中的顏色與線型性質使用方法: <br>
+<br>
+<br>
+已插入的圖塊中的物件可以保留其原有性質，可以繼承所插入圖層的性質，或繼承圖面中設定為目前的性質。 <br>
+<br>
+通常插入圖塊時，圖塊中物件的顏色、線型與線寬都保留原來的設定而不管圖面中目前的設定值如何。 然而，您仍可以建立包含繼承了目前顏色、線型與線寬設定之物件的圖塊。 這些物件具有浮動性質。 <br>
+<br>
+插入圖塊參考時，有三種處理物件顏色、線型與線寬性質的方式。 <br>
+<br>
+圖塊中的物件不繼承目前設定的顏色、線型與線寬性質。 無論目前設定值如何，圖塊中物件的性質都不會變更。 <br>
+對於此選擇，建議您分別設定圖塊定義中每個物件的顏色、線型與線寬性質：當建立這些物件時，請勿使用 BYBLOCK 或 BYLAYER 顏色、線型與線寬設定。 <br>
+<br>
+圖塊中的物件只繼承指定給目前圖層的顏色、線型與線寬性質。 <br>
+對於該選擇，在建立圖塊定義中要包含的物件之前，請將目前圖層設定為 0，並將目前的顏色、線型與線寬設定為 BYLAYER。 <br>
+<br>
+物件繼承明確設定的目前顏色、線型與線寬設定，即您設定的用來取代指定給目前圖層之顏色、線型或線寬的顏色、線型或線寬。 如果您沒有明確地設定它們，這些性質將繼承指定給目前圖層的顏色、線型與線寬。 <br>
+對於該選擇，在建立圖塊定義中要包含的物件之前，請將目前的顏色或線型設定為 BYBLOCK。 <br>
+<br>
+資料來源:Auto CAD 2006說明</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="057.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="059.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

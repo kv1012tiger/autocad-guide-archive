@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ autoCAD2006的出圖設定!】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="057.html">【奇摩知識+ autocad 有5個使用上的問題想請教!】</a></li><li><a href="058.html">＊BYLAYER &amp; BYBLOCK</a></li><li><span aria-current="page">【奇摩知識+ autoCAD2006的出圖設定!】</span></li><li><a href="060.html">【奇摩知識+ 有關cad的圖層控制 @@!】</a></li><li><a href="061.html">【奇摩知識+ 要如何進修auto cad(高階) 請提供意見】</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ autoCAD2006的出圖設定!】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-31T23:32:24">2006/03/31 23:32:24</time></p>
+        </header>
+        <div class="post-body">最近電腦升級2006版.出圖後的線條都變的很黑.如果沒有將圖做局部放大出圖.整張A4看起來就會黑黑的.不知如何設定&quot;出圖形式&quot;?印出來線條才會正常. <br>
+偏偏有些圖檔本身的&quot;出圖形式&quot;無法選取做變更.所以連要設定出圖型式都不行,請各位聰明厲害的善心人士幫幫忙解決這惱人的問題啊!!感激不盡哦~ ~ <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1306032707809" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1306032707809</a> <br>
+<br>
+1.在出圖(PLOT)時 出圖形式表(圖筆指定) 選用 monochrome.ctb (黑白出圖形式表)作出圖動作, <br>
+但是此出圖形式表為預設值,因應不同的圖面應該要設置不同的出圖形式表. <br>
+<br>
+AUTO CAD 2006的出圖型式表有CTB檔及STB檔兩種格式,CTB檔是指顏色相關出圖型式表,用以顏色來決定出圖之筆寬。 <br>
+STB檔則是依照物件性質包含出圖型式及其特性,如同一顏色的物件文字或線段可有2種筆寬。 <br>
+一般使用者幾乎都是使用 CTB檔是指顏色相關出圖型式表。所以可依照公司客戶化自訂顏色相關出圖型式表。 <br>
+<br>
+例如以下3組CTB檔是指顏色相關出圖型式表: <br>
+A1.ctb (A1版面用) 線寬指定 <br>
+顏色1:線寬-0.4000公釐 <br>
+顏色2:線寬-0.3000公釐 <br>
+顏色3:線寬-0.2000公釐... <br>
+<br>
+A3.ctb (A3版面用) 線寬指定 <br>
+顏色1:線寬-0.3000公釐 <br>
+顏色2:線寬-0.2000公釐 <br>
+顏色3:線寬-0.1000公釐... <br>
+<br>
+A4.ctb (A4版面用) 線寬指定 <br>
+顏色1:線寬-0.2000公釐 <br>
+顏色2:線寬-0.1400公釐 <br>
+顏色3:線寬-0.0800公釐... <br>
+<br>
+<br>
+PS:1.可使用 CONVERTCTB 與 CONVERTPSTYLES 指令將既有CTB檔轉換為「具名的出圖型式STB檔」。 <br>
+2.出圖型式表編輯器指令: STYLESMANAGER 。 <br>
+<br>
+<br>
+2.Q:出圖形式&quot;無法選取做變更.... <br>
+A:其實不是無法選取,而是給你圖的人沒有把該 顏色相關出圖型式表 CTB檔一併給你,建議向他要CTB檔,不然就使用monochrome.ctb。 <br>
+<br>
+*********************************************************** <br>
+<br>
+編輯出圖型式表 <br>
+<br>
+顯示出圖型式管理員 (Windows 檔案總管視窗)，您可以在其中建立或編輯出圖型式表。 <br>
+<br>
+<br>
+出圖型式表是指定給配置或模型標籤的出圖型式之集合。 有兩種出圖型式表：與顏色相關的出圖型式表與具名出圖型式表。 <br>
+<br>
+與顏色相關的出圖型式表 (CTB) 使用物件顏色決定特性 (例如，線寬)。 圖面中每個紅色的物件以相同方式出圖。 <br>
+在可以用顏色相關出圖型式表編輯出圖型式的同時，無法新增或刪除出圖型式。 <br>
+與顏色相關的出圖型式表中有 256 種出圖型式，每種型式均對應一種顏色。 <br>
+<br>
+具名出圖型式表 (STB) 包含使用者定義的出圖型式。 <br>
+當您使用具名出圖型式表時，有相同顏色的物件可能根據指定給物件的出圖型式不同，而出圖不同。 <br>
+具名出圖型式表可以包含如所需數目的出圖型式。 具名出圖型式可以指定給物件或圖層，就如其它性質。 <br>
+<br>
+資料來源:Auto ACD 2006說明</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="058.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="060.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

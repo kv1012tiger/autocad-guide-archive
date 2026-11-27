@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ 急~~AUTO CAD上顏色的時候，無法成功!!!】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="045.html">【奇摩知識+ 練習CAD的書】</a></li><li><a href="046.html">＊物 件 鎖 點(OSNAP)</a></li><li><span aria-current="page">【奇摩知識+ 急~~AUTO CAD上顏色的時候，無法成功!!!】</span></li><li><a href="048.html">【奇摩知識+ 請問AUTO CAD 2006圖塊編輯的問題!】</a></li><li><a href="049.html">＊BEDIT 圖塊編輯器 &amp; EFEDIT 參考編輯指令</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ 急~~AUTO CAD上顏色的時候，無法成功!!!】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-08T22:17:46">2006/03/08 22:17:46</time></p>
+        </header>
+        <div class="post-body">畫完2D的圖形之後，需要將某些區塊上顏色!!我使用的是2000的版本， <br>
+在上色的時候會出現，找不到有效的剖面線邊界!!我有改為使用聚合線，但還是一樣的問題!!!想請問說有沒有什麼指令可以將所有的圖形都改成不間斷的聚合線，讓上顏色可以順利點!!!!!!謝謝!!!! <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1306030807222&amp;r=w" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1306030807222&amp;r=w</a> <br>
+<br>
+如果是2006版有系統變數可以解決,如果說只是純粹沒閉合的話,此HPGAPTOL 系統變數應該是可解決,,但是我不清楚其他版本有沒有此系統變數. <br>
+<br>
+HPGAPTOL 系統變數 <br>
+將幾乎形成封閉區域的一組物件當作封閉的剖面線邊界來處理。 <br>
+預設值 0 指定物件形成沒有間隙的區域。 使用圖面單位輸入 0 到 5000 之間的值，以設定將物件作為剖面邊界時可以忽略的最大間隙尺寸。 <br>
+資料來源:auto cad 2006說明 <br>
+<br>
+如果不行的話那就有很多原因: <br>
+1.如果說原始檔圖面幾何物件較複雜的話,聚合線本身上剖面線時,無法使用指定內部點建立剖面線,可改為選取物件(S)試試看. <br>
+2.請把該聚合線複製貼到一個新的環境(新圖),測試視本身聚合線的問題,如果在新的環境可建立剖面線,可能是原始檔出了某種程度的錯誤,導致無法正常作圖,把你需要的幾何物件複製貼到一個新的環境(新圖),再使用建立剖面線. <br>
+3.有可能z軸不在零,可使用性質(Ctrl+1)將z軸歸零,或使用Express工具 FLATTEN 將所有物件做歸零動作. <br>
+<br>
+<br>
+PS:ㄧ般不建議使用此HPGAPTOL 系統變數,個人覺得會養成壞習慣而不精確的作圖,但是還要看如何使用,如果只是在建築競圖時為了效果是可行的,其他如施工圖階段最好在作圖過程使用常駐式鎖點,精確的使用鎖點作圖,這樣才不會有誤差導致線段之間有間隙,而使建立剖面線找不到有效的剖面線邊界!! <br>
+如果再不行可把電子檔案MAIL給我,我試試看能否解決.</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="046.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="048.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

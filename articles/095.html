@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ AUTOCAD如何自訂線型 我想要把線段改成表｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="093.html">奇摩知識+ CAD線型比例,在不同的圖檔中,所表現出的比例卻不同</a></li><li><a href="094.html">炸開一個文字圖塊後,內容與原來的不同</a></li><li><span aria-current="page">【奇摩知識+ AUTOCAD如何自訂線型 我想要把線段改成表</span></li><li><a href="096.html">請問~我有疑問</a></li><li><a href="097.html">【奇摩知識+ CAD設定及指令問題】</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ AUTOCAD如何自訂線型 我想要把線段改成表</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-06-04T09:12:03">2006/06/04 09:12:03</time></p>
+        </header>
+        <div class="post-body">像是 <br>
+<br>
+---++---++---++ <br>
+<br>
+或 ---AIR---AIR---AIR--- <br>
+<br>
+要從哪裡改? <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1206060209906" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1206060209906</a> <br>
+<br>
+<br>
+<br>
+<br>
+1.將以下線型語法用記事本,存檔格式為 DEMO.LIN (Auto CAD 線型檔) <br>
+<br>
+*LIN_++,---- ++ ---- <br>
+A, 10, -2.5,[&quot;++&quot;,Standard,S=2,R=0,X=-1.75,Y=-1], -2.5 <br>
+*LIN_AIR,---- AIR ---- <br>
+A, 10, -3.5,[&quot;AIR&quot;,Standard,S=2,R=0,X=-2.2,Y=-1], -3.5 <br>
+<br>
+2.將檔案存放在以下入徑: <br>
+C:\Documents and Settings\使用者名稱\Application Data\Autodesk\AutoCAD 版本\版本代號\cht\Support\ <br>
+3.使用線型管理員 LINETYPE 指令 載入 DEMO.LIN 線型檔, <br>
+選擇 LIN_AIR 及 *LIN_++ 即可 <br>
+<br>
+PS:也可以把線型語法直接掛在 acadiso.lin (公制)下,以後就不需要再載入了, <br>
+如果是初階使用者不建議掛在 acadiso.lin 底下,如果弄錯了就無法回復了! <br>
+而且請盡量不要動到原始線型檔,除非對系統有一定了解程度!</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="094.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="096.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

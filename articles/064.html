@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ CAD 圖紙空間比例設定!】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="062.html">【奇摩知識+ 怎麼消除AUTOCAD2006的出圖戳記~教育XXXXX!】</a></li><li><a href="063.html">【奇摩知識+ auto cad的快捷指令!】</a></li><li><span aria-current="page">【奇摩知識+ CAD 圖紙空間比例設定!】</span></li><li><a href="065.html">圖紙空間比例設定_補充說明</a></li><li><a href="066.html">【奇摩知識+ Auto CAD 2005 快速鍵輸入如何更改】</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ CAD 圖紙空間比例設定!】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-04-08T18:52:23">2006/04/08 18:52:23</time></p>
+        </header>
+        <div class="post-body">到配置空間時.要針對不同視複設定各比例 <br>
+輸入指令LI 會進入狀態列 <br>
+有一行的文字會顯示~~~ <br>
+相對於圖紙空間的比例為:0.3333XP <br>
+我想知道如何去換算它為S:1/30 <br>
+當中的邏輯不是很清楚???????????? <br>
+如: <br>
+0.2000XP為何是S:1/80 <br>
+10.0000XP為何是S:1/100 <br>
+3.3333XP為何是S:1/300 <br>
+<br>
+一直想不清楚~~ <br>
+請知道的人給我個答案吧~~ <br>
+謝謝 <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1306040705843" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1306040705843</a> <br>
+<br>
+<br>
+關於模型空間作圖,圖紙空間出圖的觀念,一般cad用戶想必是一個頭兩個大, <br>
+甚至連較資深的cad用戶也是一知半解,Auto CAD的基礎觀念非常重要, <br>
+因為這些基礎觀念攸關事後在圖檔編修上,是否能事半功倍及提昇效能, <br>
+在此提供個人Auto CAD的基礎觀念供參考~ <br>
+<br>
+以[設定視埠比例]舉例說明: <br>
+1.在圖紙空間建立配置視埠(MVIEW 指令)建立一個 1:1 的A1圖框(841.00 x 594.00 公釐)。 <br>
+<br>
+2.切換至模型空間: <br>
+輸入 TILEMODE 的新值 &lt;0&gt;: 1 <br>
+<br>
+3.若比例為1/100的平面圖,使用矩形(RECTANG 指令)建立一個繪圖區框(84100.00 x 59400.00 公釐)。 <br>
+<br>
+4.切換至圖紙空間: <br>
+輸入 TILEMODE 的新值 &lt;1&gt;: 0 <br>
+<br>
+5.設定視埠比例,方法ㄧ: <br>
+<br>
+5.1 從圖紙空間切換至模型空間視埠(MSPACE 指令)。 <br>
+指令: MSPACE <br>
+<br>
+5.2 將浮動空間內繪圖區框置中。 <br>
+指令: ZOOM <br>
+指定視窗角點，輸入比例係數 (nX 或 nXP)，或 <br>
+[全部(A)/中心點(C)/動態(D)/實際範圍(E)/前次(P)/比例(S)/視窗(W)/物件(O)] &lt;即時&gt;: E <br>
+<br>
+5.3 設定視埠比例。 <br>
+指令: ZOOM <br>
+指定視窗角點，輸入比例係數 (nX 或 nXP)，或 <br>
+[全部(A)/中心點(C)/動態(D)/實際範圍(E)/前次(P)/比例(S)/視窗(W)/物件(O)] &lt;即時&gt;: 1/100XP <br>
+<br>
+5.4 從模型(浮動)空間視埠切換至圖紙空間(MSPACE 指令)。 <br>
+<br>
+5.5 使用性質(PROPERTIES 指令)查詢視埠: <br>
+標準比例為1:100。 <br>
+自訂比例為0.01。 <br>
+<br>
+5.6 使用列示(LIST 指令)查詢視埠: <br>
+相對於圖紙空間的比例:0.0100xp。 <br>
+<br>
+6.設定視埠比例,方法二: <br>
+<br>
+6.1 從圖紙空間切換至模型空間視埠(MSPACE 指令)。 <br>
+指令: MSPACE <br>
+<br>
+6.2將浮動空間內繪圖區框置中。 <br>
+指令: ZOOM <br>
+指定視窗角點，輸入比例係數 (nX 或 nXP)，或 <br>
+[全部(A)/中心點(C)/動態(D)/實際範圍(E)/前次(P)/比例(S)/視窗(W)/物件(O)] &lt;即時&gt;: E <br>
+<br>
+6.3 從模型空間視埠切換至圖紙空間(MSPACE 指令)。 <br>
+<br>
+6.4 設定圖面規格(MVSETUP 指令)。 <br>
+指令: MVSETUP <br>
+輸入選項 [對齊(A)/建立(C)/調整視埠比例(S)/選項(O)/標題圖框(T)/復原(U)]: S <br>
+選取要調整比例的視埠... <br>
+選取物件: 1 找到 <br>
+選取物件: [Enter鍵] <br>
+設定圖紙空間單位相對於模型空間單位的比例... <br>
+輸入圖紙空間單位的數目&lt;1.0&gt;: 1 <br>
+輸入模型空間單位的數目&lt;1.0&gt;: 100 <br>
+輸入選項 [對齊(A)/建立(C)/調整視埠比例(S)/選項(O)/標題圖框(T)/復原(U)]: [Enter鍵] <br>
+<br>
+6.5 使用性質(PROPERTIES 指令)查詢視埠: <br>
+標準比例為1:100。 <br>
+自訂比例為0.01。 <br>
+<br>
+6.6 使用列示(LIST 指令)查詢視埠: <br>
+相對於圖紙空間的比例:0.0100xp。</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="063.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="065.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

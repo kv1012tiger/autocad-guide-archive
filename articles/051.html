@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PSLTSCALE 系統變數｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="049.html">＊BEDIT 圖塊編輯器 &amp; EFEDIT 參考編輯指令</a></li><li><a href="050.html">【奇摩知識+ 有關cad的出圖問題!】</a></li><li><span aria-current="page">PSLTSCALE 系統變數</span></li><li><a href="052.html">LTSCALE 系統變數 $ CELTSCALE 系統變數</a></li><li><a href="053.html">AUTO CAD的關聯性質</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>PSLTSCALE 系統變數</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-14T14:48:14">2006/03/14 14:48:14</time></p>
+        </header>
+        <div class="post-body">◆ PSLTSCALE 系統變數 初始值: 1 <br>
+控制圖紙空間的線型比例。 <br>
+&lt;0&gt; 沒有特殊線型比例。 線型的虛線長度以物件建立所在的空間 (模型或圖紙) 之圖面單位為根據。 按 LTSCALE 整體係數來調整比例。 <br>
+&lt;1&gt; 視埠比例會決定線型比例。 如果 TILEMODE 設為 0，即使對於模型空間中的物件，虛線長度也要基於圖紙空間圖面單位。 在這個模式下，視埠可以有不同的倍率，但顯示相同的線型。 如果是特定線型，視埠內的線條虛線長度和圖紙空間內的線條虛線長度相同。 您仍可以使用 LTSCALE 來控制虛線長度。 <br>
+<br>
+當變更 PSLTSCALE，或在 PSLTSCALE 設為 1 的情況下使用諸如 ZOOM 等指令時，視埠中的物件不會自動使用新線型比例重生。 使用 REGEN 或 REGENALL 指令更新每個視埠中的線型比例。 <br>
+<br>
+資料來源:Auto CAD 2006說明</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="050.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="052.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

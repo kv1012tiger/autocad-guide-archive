@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>圖紙空間比例設定_補充說明｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="063.html">【奇摩知識+ auto cad的快捷指令!】</a></li><li><a href="064.html">【奇摩知識+ CAD 圖紙空間比例設定!】</a></li><li><span aria-current="page">圖紙空間比例設定_補充說明</span></li><li><a href="066.html">【奇摩知識+ Auto CAD 2005 快速鍵輸入如何更改】</a></li><li><a href="067.html">即時更新acad.pgp 的步驟</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>圖紙空間比例設定_補充說明</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-04-08T18:54:03">2006/04/08 18:54:03</time></p>
+        </header>
+        <div class="post-body">1.以上作法只針對模型空間單一比例,倘若模型空間有2種比例以上時,則必須再增加步驟設定環境, <br>
+如線型來說就必須控制整體比例係數(LTSCALE)及目前物件比例(CELTSCALE)值之設定, <br>
+必須在自訂文字係數,及2組以上標註型式,做好環境設定時,使用係數可依圖面單位及比例值不同進而換算， <br>
+使其在配置空間出圖時所有文字高度、線型比例、標註型式、剖面線型式及修定雲形大小皆能一致， <br>
+不會因圖面不同的比例而導致配置圖面版面大小不一。 <br>
+2.視埠比值因不同的比例及單位而有所不同, <br>
+也就是說在圖紙空間建立一個 1:1 的A1圖框(841.00 x 594.00 公釐)。 <br>
+在模型空間比例為1/100的平面圖,繪圖區框須放大100倍(84100.00 x 59400.00 公釐)。 <br>
+A1圖框若為(84.10 x 59.40 公分)。 <br>
+在模型空間比例為1/100的平面圖,繪圖區框須放大100倍(8410.00 x 5940.00 公分)。 <br>
+如單位為公釐或公分,比例為1/200,則相對於圖紙空間的比例:0.0050xp。 <br>
+如單位為公釐或公分,比例為1/100,則相對於圖紙空間的比例:0.010xp。 <br>
+如單位為公釐或公分,比例為1/50,則相對於圖紙空間的比例:0.0200xp。 <br>
+如單位為公釐或公分,比例為1/30,則相對於圖紙空間的比例:0.0333xp。 <br>
+如單位為公釐或公分,比例為1/10,則相對於圖紙空間的比例:0.1000xp。 <br>
+<br>
+建議圖紙空間的視埠大小,最好跟模型空間的繪圖區框一樣大, <br>
+反正要記住一件事,在圖紙空間單位永遠為1:1,在模型空間作圖則按照比例正常縮放, <br>
+還有決定單位也很重要,若圖紙空間使用A1圖框(84.10 x 59.40 公分),比例1/100, <br>
+所以在模型空間單位最好也是用公分,再把繪圖區框放大100倍,則相對於圖紙空間的比例:0.0100xp。 <br>
+對於一般情況比較不會混淆弄錯。 <br>
+<br>
+但是也有特殊情況,以建築工程圖來說,整套圖是RC結構單位公分,但是某幾張圖是鋼構圖必須使用單位公釐,鋼構圖比例1/10, <br>
+這時視埠比例的設定,在模型空間單位理論上繪圖區框要放大10倍, <br>
+所以單位公分轉換單位公釐,繪圖區框需再放大10倍,所以繪圖區框總共需放大100倍, <br>
+雖然說主圖框單位為公分,但是由於鋼構圖單位是公釐,比例為1/10,在模型空間單位繪圖區框會被放大100倍, <br>
+則相對於圖紙空間的比例:0.0100xp。</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="064.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="066.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

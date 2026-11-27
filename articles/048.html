@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ 請問AUTO CAD 2006圖塊編輯的問題!】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="046.html">＊物 件 鎖 點(OSNAP)</a></li><li><a href="047.html">【奇摩知識+ 急~~AUTO CAD上顏色的時候，無法成功!!!】</a></li><li><span aria-current="page">【奇摩知識+ 請問AUTO CAD 2006圖塊編輯的問題!】</span></li><li><a href="049.html">＊BEDIT 圖塊編輯器 &amp; EFEDIT 參考編輯指令</a></li><li><a href="050.html">【奇摩知識+ 有關cad的出圖問題!】</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ 請問AUTO CAD 2006圖塊編輯的問題!】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-03-12T15:07:07">2006/03/12 15:07:07</time></p>
+        </header>
+        <div class="post-body">各位好! <br>
+使用軟體:AutoCAD2006 <br>
+發生問題:圗塊編輯. <br>
+情形:原本2005以前的版本我如果在圖塊上點兩下圖塊,會出現標籤為[參考編輯]的小視窗,然後我們可以直接按[確定],即可編輯圖塊,其餘沒有在編輯的圖面會以較暗的顏色顯示在圖面上方便比照或是加入圖塊. <br>
+但是2006在圖塊上點兩下左鍵卻會出現[編輯圖塊定義]的視窗,點下確定後只剩下我想要編輯的圖塊其餘通通不見了! <br>
+問題1:如何讓我們在執行[編輯圖塊定義]這個動作時,出現其餘的圗,方便比照? <br>
+問題2:如何修改為在圖塊上點兩下左鍵出現[參考編輯]? <br>
+感謝各位!!!!! <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1306031112480" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1306031112480</a> <br>
+<br>
+BLOCKEDITLOCK 系統變數 設定為1即可。 <br>
+<br>
+BLOCKEDITLOCK 系統變數 預設值&lt;0&gt; <br>
+禁止開啟「圖塊編輯器」與編輯動態圖塊定義。 當 BLOCKEDITLOCK 設為 1 時，按兩下圖面中的動態圖塊會開啟「參考編輯」對話方塊。 如果圖塊包含屬性，在圖塊參考上按兩下時可開啟增強型屬性編輯器 。 <br>
+0 指定可以開啟「圖塊編輯器」 <br>
+1 指定不可以開啟「圖塊編輯器」 <br>
+<br>
+Auto cad 2006 增加了動態圖塊,所以在圖塊編輯上又更靈活了。 <br>
+動態圖塊概述: <br>
+動態圖塊具有彈性和智慧。 當您工作時，可以輕鬆變更圖面中的動態圖塊參考。 您可以透過自訂掣點或自訂性質，在動態圖塊參考中操控幾何圖形。 這可讓您視需要現地調整圖塊，而不必搜尋另一個要插入的圖塊，或重新定義既有圖塊。 <br>
+例如，如果您將某個門圖塊參考插入圖面，您在編輯圖面時，可能需要變更門的大小。 如果圖塊是動態圖塊，並且已定義為大小可以調整，則您只需拖曳自訂掣點或在「性質」選項板中指定大小，來變更門的大小。 您也可能需要變更門開啟的角度。 門圖塊還可以包含對齊掣點，讓您可以輕鬆地將圖面中的門圖塊參考與其他幾何圖形對齊。 <br>
+資料來源:Auto cad 2006說明 <br>
+<br>
+PS:建議看你的使用用途運用這兩個指令,在作圖效能上絕對能大大的提昇。 <br>
+指令行: BEDIT - 開啟「編輯圖塊定義」對話方塊，然後再開啟圖塊編輯器。 <br>
+指令行: REFEDIT - 指定要編輯的參考。 如果要選取要編輯的參考，請選取一個參考中的物件。 如果您選取的物件是一或多個巢狀參考的一部份，則對話方塊內會出現這些巢狀的參考。</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="047.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="049.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

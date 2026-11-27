@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【奇摩知識+ CAD設定及指令問題】｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="095.html">【奇摩知識+ AUTOCAD如何自訂線型 我想要把線段改成表</a></li><li><a href="096.html">請問~我有疑問</a></li><li><span aria-current="page">【奇摩知識+ CAD設定及指令問題】</span></li><li><a href="098.html">【奇摩知識+ Auto CAD 的繪圖指令】</a></li><li><a href="099.html">【奇摩知識+ autocad 2000滑鼠滾輪問題…】</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>【奇摩知識+ CAD設定及指令問題】</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-06-07T19:50:18">2006/06/07 19:50:18</time></p>
+        </header>
+        <div class="post-body">AD為何突然不能從檔案裡開啟起始畫面或是開啟舊檔,變成要從底下輸入指令,連另存新檔都要變成由下面輸入路徑及檔名才可以?? <br>
+我是用CAD2000版本的.......很急 請告訴我如何改才能回到正常的設定 <br>
+或是是哪出問題????????? <br>
+請說明詳細步驟喔,因為我比較不熟,請大家能詳細一點就盡量詳細摟! 卸卸 <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1306060606667" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1306060606667</a> <br>
+<br>
+<br>
+<br>
+<br>
+請把 [抑制檔案導覽對話方塊的顯示] 的 FILEDIA 系統變數, <br>
+設定為 1 ;顯示對話方塊。 <br>
+<br>
+1.把系統變數 FILEDIA 設為 0 ,在開啟圖檔或另存新檔就不顯示對話方塊,而變成指令行方式。 <br>
+指令: FILEDIA <br>
+輸入 FILEDIA 的新值 &lt;1&gt;: 0 <br>
+指令: OPEN <br>
+指令:輸入欲開啟的圖檔名稱 &lt;.&gt;: <br>
+指令: _saveas <br>
+目前的檔案格式: AutoCAD 2000(LT2000) 圖面 <br>
+輸入檔案格式 [2000(LT2000)/2004/標準(S)/DXF/樣板(T)] &lt;R2000&gt;: <br>
+<br>
+2.把系統變數 FILEDIA 設為 1 (初始值),在開啟圖檔或另存新檔就會顯示對話方塊。 <br>
+指令: FILEDIA <br>
+輸入 FILEDIA 的新值 &lt;0&gt;: 1 <br>
+<br>
+PS:研判有人誤改了系統變數或是你在CAD有執行某些外掛的LISP,也有可能執行了某些腳本檔, <br>
+這些程式寫的不是那麼完整,而程式把系統變數 FILEDIA 改了,卻忘了將系統變數 FILEDIA 回副為初始值了。 <br>
+<br>
+<br>
+<br>
+FILEDIA 系統變數 抑制檔案導覽對話方塊的顯示。 <br>
+<br>
+&lt;0&gt; 不顯示對話方塊。 透過在回應指令提示時輸入波浪符號 (~)，仍然可以顯示檔案對話方塊。 <br>
+這對 AutoLISP 和 ADS 函數也有效。 <br>
+<br>
+&lt;1&gt; 顯示對話方塊。 但是，如果腳本或 AutoLISP/ObjectARX™ 程式處於作用中，則顯示一般的提示。 <br>
+<br>
+資料來源:Auto CAD 2006 說明</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="096.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="098.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>

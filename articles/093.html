@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>奇摩知識+ CAD線型比例,在不同的圖檔中,所表現出的比例卻不同｜AutoCAD 指南・家族典藏</title>
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="banner"><div class="site-width banner-inner">
+    <a class="brand" href="../index.html">AutoCAD 指南<span>家族典藏</span></a>
+    <a class="banner-link" href="../index.html#topics">文章目錄</a>
+  </div></header>
+  <div class="site-width layout">
+    <aside class="rail" aria-label="文章導覽">
+      <h2>文章導覽</h2>
+      <a class="index-link" href="../index.html#topics">回文章目錄</a>
+      <ul class="nearby"><li><a href="091.html">LENGTHEN指令</a></li><li><a href="092.html">如何將cad檔轉成其他檔</a></li><li><span aria-current="page">奇摩知識+ CAD線型比例,在不同的圖檔中,所表現出的比例卻不同</span></li><li><a href="094.html">炸開一個文字圖塊後,內容與原來的不同</a></li><li><a href="095.html">【奇摩知識+ AUTOCAD如何自訂線型 我想要把線段改成表</a></li></ul>
+    </aside>
+    <main id="main" class="panel">
+      <article>
+        <header class="panel-heading"><h1>奇摩知識+ CAD線型比例,在不同的圖檔中,所表現出的比例卻不同</h1>
+          <p class="byline">Tiger&amp;蘋果爸<time datetime="2006-05-24T20:51:33">2006/05/24 20:51:33</time></p>
+        </header>
+        <div class="post-body">有A,B兩張圖,設定都是相同的(B是由A複製過去改名,且無再作任何變更): <br>
+1. LTSCALE=100 ; PSLTSCALE=0 ; CELTSCALE=1 ; SCALELISTEDIT=1:1 <br>
+2. 在模型中作圖 <br>
+3. 畫一條虛線, 線型=HIDDEN ; Linetype scale=1 <br>
+問題: <br>
+A圖可以看的出來是條虛線,B圖卻看不出來 <br>
+題外: <br>
+因為在畫天花時,是用HATCH中方格的圖型來畫.但是卻無法試出可以畫出每邊長1000長度的方格,這個比例和線型的比例好像是相關連的. <br>
+軟體: <br>
+AUTOCAD 2006英文版 <br>
+這個問題困擾很久了,也問過很多人,皆無人可以解決,知識不乏臥虎藏龍之輩,希望能有人可以回答~ <br>
+投票只能選出有人氣的答案,且容易作假,所以不會交付投票.雖然不容易,但一定會選出最佳解答,謝謝各位大大啦~!~! <br>
+<a href="http://tw.knowledge.yahoo.com/question/?qid=1206051902942" rel="noreferrer">http://tw.knowledge.yahoo.com/question/?qid=1206051902942</a> <br>
+<br>
+<br>
+經檢核過初步判斷: <br>
+圖檔A的HIDDEN線型是英制的,而圖檔B的HIDDEN線型卻是是公制的。 <br>
+<br>
+雖然說圖檔A及B線型整體比例係數LTSCALE均為100,但是由於載入的線型單位不同所以線型密度也會不同(公制的線型密度是英制的25.4倍). <br>
+你也可以將圖檔B的線型整體比例係數LTSCALE改為3.937(100/25.4=3.937),在圖檔B的線型密度就會和圖檔A一樣. <br>
+<br>
+以上情況在一般的正常使用時是不可能發生的,可能是有人誤改了系統變數,或是載入線型檔時選錯了檔案(英制為 acad.lin ,公制為 acadiso.lin). <br>
+<br>
+如果說覺得檔案線型還是怪怪的,可以先自行檢測,以圖檔B的HIDDEN線型來說, <br>
+先將HIDDEN線型名稱做更名為HIDDEN(原有), <br>
+再分別載入英制(acad.lin)的HIDDEN線型名稱做更名為HIDDEN(英制), <br>
+載入公制(acadiso.lin)的HIDDEN線型名稱做更名為HIDDEN(公制), <br>
+把三條LINE做比對即可得知線型名稱HIDDEN(原有)為公制還是英制. <br>
+<br>
+一般在新建檔案時有英制及公制兩種選擇,是由 MEASUREINIT 系統變數控管;控制從頭開始的圖面使用英制預設值還是公制預設值。 <br>
+載入剖面線樣式和線型檔,是由 MEASUREMENT 系統變數控管;控制目前圖面使用英制剖面線樣式和線型檔還是公制剖面線樣式和線型檔。 <br>
+<br>
+PS:如果說目前的檔案以不知道哪些事公制或英制,建議不要再由這些圖檔使用另存新檔方式做圖,而是要用new指令新建檔案選擇正確的公制單位,重新以正確的單位作圖,因為要每個檔案作檢測太花時間了. <br>
+<br>
+PS2:至於剖面線選擇類型時,請選擇使用者定義,將指定使用者定義樣式的雙向剖面線樣式,最後將行距輸入即可。 <br>
+<br>
+PS3:如果有設定整體比例係數 LTSCALE 時,請將 PSLTSCALE 系統變數 設為 0 。 <br>
+因為若勾選 [使用圖紙空間單位調整比例],在一般模型空間作圖時,配置空間出圖時才會有作用. <br>
+當您使用多個視埠時，此選項非常有用。 <br>
+<br>
+剖面線型也是由 MEASUREINIT 系統變數及 MEASUREMENT 系統變數控管。 <br>
+而圖檔B的剖面線型是公制的,基本上要上天花板的 HATCH 可用上述 PS2: 的作法, <br>
+如果你要用 ANSI37 剖面線,比例請輸入188.9764 即能得到每個方框都變成600x600, <br>
+但是不建議用 ANSI37 剖面線來做天花板,每次換算太累了! <br>
+<br>
+至於另存新檔時,可先行開一張正確的單位環境,再把你要的圖複製進來比較好,至少整個環境單位是正確的,才不會有公制及英制混亂的圖面. <br>
+建議自行建立標準樣板檔,把要的字型.線型.圖層.標註等等先建立好, <br>
+將來就以此圖來另存作業,不要再用錯的圖另存,這樣只會惡性循環~</div>
+      </article>
+      <nav class="pagination" aria-label="相鄰文章">
+        <a rel="prev" href="092.html">上一篇</a>
+        <a href="../index.html#topics">文章目錄</a>
+        <a rel="next" href="094.html">下一篇</a>
+      </nav>
+    </main></div>
+  <footer class="site-width footer">AutoCAD 指南家族網頁備份</footer>
+</body>
+</html>
