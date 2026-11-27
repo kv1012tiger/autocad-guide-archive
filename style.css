@@ -47,3 +47,12 @@ a:hover { color: red; }
   .button { padding-inline: 4px; }
   .post-meta { line-height: 28px; }
 }
+
+.banner-ad { text-align: right; margin: 4px 8px 4px 0; }
+.banner-ad img { display: inline-block; width: min(728px, 100%); height: auto; }
+.island-ad { float: right; width: 300px; max-width: 40%; margin: 0 0 12px 16px; }
+.island-ad img { display: block; width: 100%; height: auto; }
+.article::after { content: ""; display: block; clear: both; }
+@media (max-width: 520px) {
+  .island-ad { width: 160px; max-width: 45%; margin-left: 8px; }
+}
