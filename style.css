@@ -41,6 +41,9 @@ a:hover { color: red; }
 .topics { list-style: none; padding: 0; margin: 0; }
 .topics li { padding: 5px; border-bottom: 1px solid #d1e2c9; display: flex; justify-content: space-between; gap: 1rem; }
 .topics time { white-space: nowrap; font-size: 13px; }
+#pagination { margin: 12px 0; line-height: 2; }
+#pagination button { cursor: pointer; }
+#pagination button[aria-current="page"] { font-weight: bold; background: #d1e2c9; }
 [hidden] { display: none !important; }
 @media (max-width: 520px) {
   .sidebar { flex-basis: 110px; width: 110px; }
